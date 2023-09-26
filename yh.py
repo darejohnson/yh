@@ -12,4 +12,7 @@ start_date = (datetime.now() - timedelta(days=1.5 * 365)).strftime("%Y-%m-%d")
 # Get the historical data
 data = yf.download(ticker, start=start_date, end=end_date)
 
-data.to_csv("./sp.csv")
+# Path
+output_path  = "./yh/sp.csv"
+
+data.to_csv(output_path)
