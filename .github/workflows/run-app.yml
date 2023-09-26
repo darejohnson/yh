@@ -3,7 +3,7 @@ name: data_update
 on:
   schedule:
      - cron: '0 * * * *'
-  workflow_dispatch: 
+   
 
 jobs:
   update-data:
