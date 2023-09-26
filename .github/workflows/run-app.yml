@@ -1,0 +1,21 @@
+name: data_update
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.x
+
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Run Python script
+        run: python yh.py
