@@ -24,3 +24,9 @@ jobs:
 
       - name: Run Python script
         run: python yh.py
+        
+      - name: Upload CSV as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: output-csv  # The name of the artifact
+          path: sp.csv      # The path to the file you want to upload
