@@ -13,6 +13,6 @@ start_date = (datetime.now() - timedelta(days=1.5 * 365)).strftime("%Y-%m-%d")
 data = yf.download(ticker, start=start_date, end=end_date)
 
 # Path
-output_path  = "https://github.com/darejohnson/yh/sp.csv"
+output_path  = "./yh/sp.csv"
 
 data.to_csv(output_path)
